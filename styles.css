@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-black: #131313;
+    --secondary-gray: #1C1C1C;
+    --primary-button: #AD0000;
+    --text-primary: white;
+
+    /* card */
+    --card-bg: #2D2D2DFF;
+    --card-footer: #3C3C3C;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A0A0A0;
+
+    /*  decoration */
+    --primary-border: #6E6E6E;
+
+    /* screen breakpoints */
+    --mobile: 768px;
+    --tablet: 1040px;
+    --desktop: 1440px;
+}
+
+body {
+    background-color: var(--secondary-gray);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+/* side bar */
+.sidebar {
+    background-color: var(--primary-black);
+    height: 100vh;
+    width: 260px;
+    padding-left: 3rem;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sidebar .logo {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 3rem;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--textprimary);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+.sidebar img {
+    margin-right: 2rem;
+    height: 1.2rem;
+}
+/* closing side bar */
+
+/* body */
+.body-container {
+    margin-left: 350px;
+    padding: 2rem;
+}
+
+.card-container {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 15px;
+    width: 180px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--primary-border);
+  }
+  
+  .card-header h2 {
+    font-size: 16px;
+    margin: 0 0 15px 0;
+  }
+  
+  .card-body {
+    margin-bottom: 15px;
+  }
+  
+  .ordered-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .item-name, .item-price {
+    font-size: 14px;
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--primary-border);
+    padding-top: 10px;
+  }
+  
+  .total-label, .total-price {
+    font-size: 14px;
+    font-weight: bold;
+  }

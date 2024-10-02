@@ -3,27 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
     <title>RedPOS</title>
 </head>
 <body>
-    <div class="globa-container">
+    <div class="global-container">
         <nav class="sidebar">
             <div class="logo">
-                
+                Logo
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="orders.html">Orders</a></li>
-                    <li><a href="customers.html">Customers</a></li>
-                    <li><a href="history.html">History</a></li>
-                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="#"><img src="/assets/home.svg"/>Home</a></li>
+                    <li><a href="#"><img src="/assets/menu.svg"/>Menu</a></li>
+                    <li><a href="#"><img src="/assets/order.svg"/>Orders</a></li>
+                    <li><a href="#"><img src="/assets/checkouts.svg"/>Checkouts</a></li>
+                    <li><a href="#"><img src="/assets/settings.svg"/>Settings</a></li>
                 </ul>
             </div>
         </nav>
         <div class="body-container">
-            
+            <div class="header">
+                <h2>Recent Checkouts</h2>
+                <!--card component-->
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-header">
+                          <h2>Order ID: #147815</h2>
+                        </div>
+                        <div class="card-body">
+                          <div class="ordered-item">
+                            <span class="item-name">Caffe Latte</span>
+                            <span class="item-price">$2</span>
+                          </div>
+                          <div class="ordered-item">
+                            <span class="item-name">Caffe Cappucino</span>
+                            <span class="item-price">$2</span>
+                          </div>
+                        </div>
+                        <div class="card-footer">
+                          <span class="total-label">Total Bill:</span>
+                          <span class="total-price">$4</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                          <h2>Order ID: #147815</h2>
+                        </div>
+                        <div class="card-body">
+                          <div class="ordered-item">
+                            <span class="item-name">Caffe Latte</span>
+                            <span class="item-price">$2</span>
+                          </div>
+                          <div class="ordered-item">
+                            <span class="item-name">Caffe Cappucino</span>
+                            <span class="item-price">$2</span>
+                          </div>
+                        </div>
+                        <div class="card-footer">
+                          <span class="total-label">Total Bill:</span>
+                          <span class="total-price">$4</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!--closing card component-->
+            </div>
         </div>
     </div>
 </body>
