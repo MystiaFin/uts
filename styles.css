@@ -1,24 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --primary-black: #131313;
-    --secondary-gray: #1C1C1C;
-    --primary-button: #AD0000;
-    --text-primary: white;
+    --primary-black: #11111b;
+    --secondary-gray: #1e1e2e;
+    --primary-button: #f38ba8;
+    --text-primary: #cdd6f4;
+    --text-secondary: #1e1e2e;
 
     /* card */
-    --card-bg: #2D2D2DFF;
+    --card-bg: #45475a;
     --card-footer: #3C3C3C;
-    --text-primary: #FFFFFF;
-    --text-secondary: #A0A0A0;
 
     /*  decoration */
-    --primary-border: #6E6E6E;
+    --primary-border: #7f849c;
 
     /* screen breakpoints */
     --mobile: 768px;
     --tablet: 1040px;
     --desktop: 1440px;
+
+    /* piechart color */
+    --pie-rosewater: #f5e0dc;
+    --pie-pink: #f5c2e7;
+    --pie-red: #f38ba8;
+    --pie-peach: #fab387;
+    --pie-green: #a6e3a1;
+    --pie-sky: #89dceb;
 }
 
 body {
@@ -76,9 +83,13 @@ body {
     padding: 2rem;
 }
 
+
+/* top-items */
 .card-container {
-    display: flex;
-    gap: 0.8rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-grow: 1;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -120,3 +131,68 @@ body {
     font-size: 14px;
     font-weight: bold;
   }
+
+  hr {
+    border: 1px solid var(--primary-border);
+    margin: 1rem 0;
+  }
+/* closing top-items */
+
+/* bottom-items */
+.second-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.pie-chart {
+  flex: 1;
+  max-width: 800px;
+}
+
+#piechart {
+  width: 100%;
+  height: 300px;
+  background-color: transparent !important;
+}
+
+.top-sales {
+  flex: 1;
+  
+  max-width: 800px;
+}
+
+.top-sales h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.top-sales-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.top-sales-list li {
+  margin-bottom: 1rem;
+}
+
+.sales-bar {
+  padding: 0.25rem;
+  border-radius: 9999px;
+  color: var(--text-secondary);
+  text-align: right;
+  padding-right: 10px;
+  line-height: 20px;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.item-name {
+  font-weight: 500;
+}

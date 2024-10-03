@@ -4,24 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
+    <script src="/components/navbar.js"></script>
     <title>RedPOS</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="global-container">
-        <nav class="sidebar">
-            <div class="logo">
-                Logo
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#"><img src="/assets/home.svg"/>Home</a></li>
-                    <li><a href="#"><img src="/assets/menu.svg"/>Menu</a></li>
-                    <li><a href="#"><img src="/assets/order.svg"/>Orders</a></li>
-                    <li><a href="#"><img src="/assets/checkouts.svg"/>Checkouts</a></li>
-                    <li><a href="#"><img src="/assets/settings.svg"/>Settings</a></li>
-                </ul>
-            </div>
-        </nav>
+      <script>
+        $(document).ready(function() {
+            const navbar = new Navbar({
+                logoText: 'RedPOS'
+            });
+            navbar.mount($('body'));
+            navbar.setActive(0);
+        });
+    </script>
         <div class="body-container">
             <div class="header">
                 <h2>Recent Checkouts</h2>
@@ -65,9 +62,109 @@
                           <span class="total-price">$4</span>
                         </div>
                     </div>
-                    
+                    <div class="card">
+                        <div class="card-header">
+                          <h2>Order ID: #147815</h2>
+                        </div>
+                        <div class="card-body">
+                          <div class="ordered-item">
+                            <span class="item-name">Caffe Latte</span>
+                            <span class="item-price">$2</span>
+                          </div>
+                          <div class="ordered-item">
+                            <span class="item-name">Caffe Cappucino</span>
+                            <span class="item-price">$2</span>
+                          </div>
+                        </div>
+                        <div class="card-footer">
+                          <span class="total-label">Total Bill:</span>
+                          <span class="total-price">$4</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                          <h2>Order ID: #147815</h2>
+                        </div>
+                        <div class="card-body">
+                          <div class="ordered-item">
+                            <span class="item-name">Caffe Latte</span>
+                            <span class="item-price">$2</span>
+                          </div>
+                          <div class="ordered-item">
+                            <span class="item-name">Caffe Cappucino</span>
+                            <span class="item-price">$2</span>
+                          </div>
+                        </div>
+                        <div class="card-footer">
+                          <span class="total-label">Total Bill:</span>
+                          <span class="total-price">$4</span>
+                        </div>
+                    </div>
                 </div>
                 <!--closing card component-->
+            </div>
+            <hr />
+            <div class="second-container">
+              <div class="pie-chart">
+                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                <script type="text/javascript">
+                  google.charts.load('current', {'packages':['corechart']});
+                  google.charts.setOnLoadCallback(drawChart);
+              
+                  function drawChart() {
+                    var data = google.visualization.arrayToDataTable([
+                      ['Menu', 'Percentage'],
+                      ['Americano', 4.7],
+                      ['Cappuccino', 35.3],
+                      ['Latte', 20.2],
+                      ['Macchiato', 15.3],
+                      ['Misto', 5],
+                      ['Mocha', 19.5]
+                    ]);
+              
+                    var options = {
+                      title: 'Menu Distribution',
+                      pieHole: 0,
+                      backgroundColor: 'transparent',
+                      chartArea: {width: '75%', height: '75%'},
+                        legend: {textStyle: {color: 'white', fontSize: 16}, alignment: 'center', position: 'right'},
+                        titleTextStyle: {color: 'white', fontSize: 24},
+                      pieSliceTextStyle: {color: 'white'},
+                      colors: [
+                          '--pie-rosewater',
+                          '--pie-pink',
+                          '--pie-red',
+                          '--pie-peach',
+                          '--pie-green',
+                          '--pie-sky',
+                        ].map(color => getComputedStyle(document.documentElement).getPropertyValue(color).trim()
+                    ),
+                        pieSliceText: 'none'
+                    };
+
+                    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                    chart.draw(data, options);
+                  }
+                </script>
+                <div id="piechart"></div>
+              </div>
+              <div class="top-sales">
+                <h2>Top Sales</h2>
+                <ul class="top-sales-list">
+                  <li>
+                    <span class="item-name">Cappuccino</span>
+                    <div class="sales-bar" style="width: 68%; background-color: #f5c2e7;">35.3%</div>
+                  </li>
+                  <li>
+                    <span class="item-name">Mocha</span>
+                    <div class="sales-bar" style="width: 58%; background-color: #89dceb">19.5%</div>
+                  </li>
+                  <li>
+                    <span class="item-name">Latte</span>
+                    <div class="sales-bar" style="width: 45%; background-color: #f38ba8">20.2%</div>
+                  </li>
+                </ul>
+              </div>
             </div>
         </div>
     </div>
