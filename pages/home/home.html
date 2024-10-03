@@ -3,22 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
-    <script src="/components/navbar.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../global.css">
+    <script src="../../components/navbar.js"></script>
     <title>RedPOS</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="global-container">
-      <script>
-        $(document).ready(function() {
-            const navbar = new Navbar({
-                logoText: 'RedPOS'
-            });
-            navbar.mount($('body'));
-            navbar.setActive(0);
-        });
-    </script>
+      <div id="sidebar"></div>
         <div class="body-container">
             <div class="header">
                 <h2>Recent Checkouts</h2>
@@ -168,5 +160,12 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../components/navbar.js"></script>
+    <script>
+      $(document).ready(function() {
+          $('#sidebar').createSidebar();
+      });
+    </script>
 </body>
 </html>
