@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Americano",
+    "image": "../../assets/menus/americano.jpg",
+    "price": 2.0
+  },
+  {
+    "name": "Cappuccino",
+    "image": "../../assets/menus/cappuccino.jpg",
+    "price": 2.8
+  },
+  {
+    "name": "Latte",
+    "image": "../../assets/menus/latte.jpg",
+    "price": 2.5
+  },
+  {
+    "name": "Macchiato",
+    "image": "../../assets/menus/macchiato.jpg",
+    "price": 2.8
+  },
+  {
+    "name": "Misto",
+    "image": "../../assets/menus/misto.jpg",
+    "price": 3.0
+  },
+  {
+    "name": "Mocha",
+    "image": "../../assets/menus/mocha.jpg",
+    "price": 3.0
+  }
+]

@@ -1,0 +1,33 @@
+[
+    {
+      "name": "Americano",
+      "description": "HOT: Rich, full-bodied espresso with hot water.",
+      "image": "../../assets/menus/americano.jpg"
+    },
+    {
+      "name": "Cappuccino",
+      "description": "Espresso with steamed milk, topped with a deep layer of foam.",
+      "image": "../../assets/menus/cappuccino.jpg"
+    },
+    {
+      "name": "Latte",
+      "description": "Rich, full-bodied espresso in steamed milk, lightly topped with foam.",
+      "image": "../../assets/menus/latte.jpg"
+    },
+    {
+      "name": "Macchiato",
+      "description": "Espresso combined with vanilla-flavoured syrup, milk and caramel sauce over ice.",
+      "image": "../../assets/menus/macchiato.jpg"
+    },
+    {
+      "name": "Misto",
+      "description": "Equal parts fresh filter coffee and frothy steamed milk.",
+      "image": "../../assets/menus/misto.jpg"
+    },
+    {
+      "name": "Mocha",
+      "description": "Espresso with bittersweet mocha sauce and steamed milk, topped with sweetened whipped cream. Delightful.",
+      "image": "../../assets/menus/mocha.jpg"
+    }
+  ]
+  

@@ -23,6 +23,7 @@ iframe {
     /* card */
     --card-bg: #45475a;
     --card-footer: #3C3C3C;
+    --menu-bg: #181825;
 
     /*  decoration */
     --primary-border: #7f849c;
@@ -39,6 +40,10 @@ iframe {
     --pie-peach: #fab387;
     --pie-green: #a6e3a1;
     --pie-sky: #89dceb;
+
+    /* button */
+    --btn-red: #f38ba8;
+    --btn-green: #a6e3a1;
 }
 
 body {
